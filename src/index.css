@@ -1,0 +1,168 @@
+:root {
+    --bg-color: #C0C0C0;
+    --text-color: #000000;
+    --border-dark: #808080;
+    --border-light: #FFFFFF;
+    --highlight: #0000FF;
+    --disabled-bg: #A0A0A0;
+    --disabled-text: #808080;
+    --title-gradient-top: #000080;
+    --title-gradient-bottom: #A6CAF0;
+    --button-light: #F0F0F0;
+    --button-dark: #404040;
+    --footer-bg: #000080;
+    --footer-text: #FFFFFF;
+    --button-hover: #D0D0D0;
+    --todo-completed: #808080;
+  }
+  
+  body {
+    font-family: "MS Sans Serif", sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, var(--title-gradient-top), var(--title-gradient-bottom));
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: 2px solid var(--border-dark);
+    border-right-color: var(--border-light);
+    border-bottom-color: var(--border-light);
+    margin-bottom: 20px;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .add-todo {
+    width: 300px;
+    padding: 15px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--border-dark);
+    border-right-color: var(--border-light);
+    border-bottom-color: var(--border-light);
+    box-shadow: inset 1px 1px var(--border-light), inset -1px -1px var(--border-dark);
+  }
+  
+  .add-todo form input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid var(--border-dark);
+    border-right-color: var(--border-light);
+    border-bottom-color: var(--border-light);
+    box-shadow: inset 1px 1px var(--border-light), inset -1px -1px var(--border-dark);
+    font-family: "MS Sans Serif", sans-serif;
+    font-size: 14px;
+  }
+  
+  .add-todo form button {
+    margin-top: 10px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--border-dark);
+    border-right-color: var(--border-light);
+    border-bottom-color: var(--border-light);
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: "MS Sans Serif", sans-serif;
+    font-size: 14px;
+  }
+  
+  .add-todo form button:hover {
+    background-color: var(--button-hover);
+  }
+  
+  .add-todo form span {
+    display: block;
+    color: var(--highlight);
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .todo-list {
+    width: 320px;
+    padding: 15px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--border-dark);
+    border-right-color: var(--border-light);
+    border-bottom-color: var(--border-light);
+    box-shadow: inset 1px 1px var(--border-light), inset -1px -1px var(--border-dark);
+    margin-top: 20px;
+  }
+  
+  .todo-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .todo-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-dark);
+  }
+  
+  .todo-list input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .todo-list span {
+    flex-grow: 1;
+    color: var(--text-color);
+  }
+  
+  .todo-list span[style*="line-through"] {
+    color: var(--todo-completed);
+  }
+  
+  .todo-list form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .todo-list form input[type="text"] {
+    flex-grow: 1;
+  }
+  
+  .todo-list button {
+    background-color: var(--bg-color);
+    border: 2px solid var(--border-dark);
+    border-right-color: var(--border-light);
+    border-bottom-color: var(--border-light);
+    padding: 2px 10px;
+    cursor: pointer;
+    font-family: "MS Sans Serif", sans-serif;
+    font-size: 12px;
+  }
+  
+  .todo-list button:hover {
+    background-color: var(--button-hover);
+  }
+  
+  .footer {
+    margin-top: 20px;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  .footer a {
+    color: var(--footer-text);
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
