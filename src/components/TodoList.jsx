@@ -40,7 +40,7 @@ export default function TodoList() {
     <div className="todo-list">
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id}>
+          <li key={todo.id} className="todo">
             <input
               type="checkbox"
               checked={todo.isCompleted}
@@ -73,6 +73,7 @@ export default function TodoList() {
                   style={{
                     textDecoration: todo.isCompleted ? "line-through" : "",
                   }}
+                  id="todo-text"
                 >
                   {todo.text}
                 </span>
